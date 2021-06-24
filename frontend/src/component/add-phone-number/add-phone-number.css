@@ -1,0 +1,23 @@
+.add-phone-number {
+    margin-top: 10px;
+}
+.add-phone-number input {
+    padding-right: 40px;
+    margin: 5px 3px 0 3px;
+    width: auto;
+    flex-grow: 1;
+}
+.add-phone-number button {
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
