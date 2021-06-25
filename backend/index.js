@@ -25,7 +25,6 @@ io.on('connection', socket => {
             console.log(err)
             return
         }
-        console.log(rows)
         socket.emit('newNumbers', {rows})
     })
 
@@ -43,7 +42,6 @@ io.on('connection', socket => {
                 if (err) {
                     console.log(err)
                 }
-                console.log(rows)
                 io.emit('newNumbers', {rows})
 
             })
@@ -64,7 +62,6 @@ io.on('connection', socket => {
             if (err) {
                 console.log(err)
             }
-            console.log(rows)
             io.emit('newNumbers', {rows})
 
         })

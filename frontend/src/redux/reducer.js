@@ -33,7 +33,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 phoneList: [
                     ...state.phoneList,
-                    {number: phoneWithCountry}
+                    {number: phoneWithCountry, id: idx++}
                 ],
                 newPhoneChange: '',
                 isValidPhone: {
@@ -41,6 +41,13 @@ const reducer = (state = initialState, action) => {
                     isValid: false,
                     errorText: ''
                 }
+            }
+
+        case 'DELETE_PHONE':
+
+            return {
+                ...state,
+                phoneList: state.phoneList.filter(item =>  item.id !== action.id)
             }
 
         case 'CHANGE_SELECTED_COUNTRY':
@@ -66,3 +73,5 @@ const reducer = (state = initialState, action) => {
 }
 
 export default reducer
+
+let idx = 1;

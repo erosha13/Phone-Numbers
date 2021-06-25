@@ -22,8 +22,8 @@ export const addNumber = () => {
 }
 
 export const deleteNumber = (id) => {
-    return async function onDeleteNumber() {
-
+    return async function onDeleteNumber(dispatch) {
         await client.emit('deleteNumber', id)
+        dispatch({type: 'DELETE_PHONE', id: id})
     }
 }
